@@ -8,7 +8,7 @@ pipeline{
        }
        stage('LB'){
         steps{
-              sh "aws elbv2 create-load-balancer --name my-load-balancer --subnets subnet-04bb8948 --security-groups sg-0244e3f85210cc582 --region us-east-2 "
+              sh "aws elbv2 create-load-balancer --name my-load-balancer --subnets subnet-04bb8948, subnet-15e22868 --security-groups sg-0244e3f85210cc582 --region us-east-2 "
             }
         }
         stage('TG'){
